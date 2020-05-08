@@ -19,6 +19,7 @@ CXXFLAGS = -Wall -std=c++11 -g
 projet: projet.cpp coord.o grille.o termite.o //Ã  complÃ©ter...
 testcoord: testcoord.cpp coord.o
 testgrille: testgrille.cpp grille.o coord.o
+testdir: testdir.cpp dir.o
 //Ã  complÃ©ter...
 
 //Les diffÃ©rents composants
@@ -28,10 +29,11 @@ testgrille: testgrille.cpp grille.o coord.o
 
 coord.o: coord.cpp coord.hpp
 grille.o: grille.cpp grille.hpp coord.hpp
+dir.o: dir.cpp dir.hpp
 //Ã  complÃ©ter...
 
 //Pour faire le mÃ©nage
 clean:
-	rm -f projet testgrille testcoord *.o
+	rm -f projet testgrille testcoord testdir *.o
 //Attention dans la ligne ci-dessus il faut Ã©crire
 //un seul caractÃ¨re de tabulation et pas 8 espaces.
