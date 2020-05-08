@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+#include "coord.hpp"
+#define ASSERT(test) if (!(test)) cout << "Test failed in file " << __FILE__ \
+                                       << " line " << __LINE__ << ": " #test << endl
 
-struct Coord{
-  int abs;
-  int ord;
-};
+
 
 Coord creeCoord(int lig,int col){
   Coord C;
@@ -36,8 +36,10 @@ bool egalCoord(Coord C1, Coord C2){
   return true;
 }
 
-int main(){
-Coord c1 = creeCoord(2,1); afficheCoord(c1);
-cout << endl;
-return 0;
+void testEgalCoord(){
+  Coord c1={1,1}; Coord c2={1,1};
+  ASSERT(egalCoord(c1,c2));
+  c1={4,5}; c2={4,5};
+  ASSERT(egalCoord(c1,c2));
+
 }
