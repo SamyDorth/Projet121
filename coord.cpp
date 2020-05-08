@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 #include "coord.hpp"
+#include "dir.hpp"
+
 #define ASSERT(test) if (!(test)) cout << "Test failed in file " << __FILE__ \
                                        << " line " << __LINE__ << ": " #test << endl
 
@@ -42,4 +44,19 @@ void testEgalCoord(){
   c1={4,5}; c2={4,5};
   ASSERT(egalCoord(c1,c2));
 
+}
+
+Coord devantCoord(Coord c){
+  Coord res=c;
+  switch(C.dir){
+    case nord_ouest:  res.abs--; res.ord--; break;
+    case ouest :      res.abs--; break;
+    case sud_ouest :  res.abs--; res.ord++; break;
+    case sud :        res.ord++; break;
+    case sud_est :    res.abs++; res.ord++; break;
+    case est :        res.abs++; break;
+    case nord_est :   res.abs++; res.ord--; break;
+    case nord:        res.abs--; break;
+    }
+    return res;
 }

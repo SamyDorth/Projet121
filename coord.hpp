@@ -1,12 +1,15 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+#include "dir.hpp"
+
 #define ASSERT(test) if (!(test)) cout << "Test failed in file " << __FILE__ \
                                        << " line " << __LINE__ << ": " #test << endl
 
 struct Coord{
   int abs;
   int ord;
+  Direction dir;
 };
 
 Coord creeCoord(int lig,int col);

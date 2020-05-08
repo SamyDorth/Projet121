@@ -27,7 +27,7 @@ testdir: testdir.cpp dir.o
 //on donne le fichier .cpp ainsi que la liste
 //des fichiers .hpp dont ils dÃ©pendent
 
-coord.o: coord.cpp coord.hpp
+coord.o: coord.cpp coord.hpp dir.o
 grille.o: grille.cpp grille.hpp coord.hpp
 dir.o: dir.cpp dir.hpp
 //Ã  complÃ©ter...

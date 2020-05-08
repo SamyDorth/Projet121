@@ -3,6 +3,7 @@
 using namespace std;
 #include "dir.hpp"
 
+
 void afficheDirection(Direction d){
   string res;
   switch(d){
