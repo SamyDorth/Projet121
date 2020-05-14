@@ -12,7 +12,7 @@ struct Coord{
   Direction dir;
 };
 
-Coord creeCoord(int lig,int col);
+Coord creeCoord(int lig,int col,Direction dir);
 
 void afficheCoord(Coord C);
 
@@ -23,3 +23,5 @@ int getY(Coord C);
 bool egalCoord(Coord C1, Coord C2);
 
 void testEgalCoord();
+
+Coord devantCoord(Coord c);

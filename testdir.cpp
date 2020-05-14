@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-using namespace std;
-#include "dir.hpp"
 
+#include "dir.hpp"
+using namespace std;
 
 int main(){
   testAGAD();

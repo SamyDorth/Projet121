@@ -9,10 +9,11 @@ using namespace std;
 
 
 
-Coord creeCoord(int lig,int col){
+Coord creeCoord(int lig,int col,Direction dir){
   Coord C;
   C.abs=lig;
   C.ord=col;
+  C.dir=dir;
   return C;
 }
 
