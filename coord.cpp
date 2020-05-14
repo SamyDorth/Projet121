@@ -49,7 +49,7 @@ void testEgalCoord(){
 
 Coord devantCoord(Coord c){
   Coord res=c;
-  switch(C.dir){
+  switch(c.dir){
     case nord_ouest:  res.abs--; res.ord--; break;
     case ouest :      res.abs--; break;
     case sud_ouest :  res.abs--; res.ord++; break;

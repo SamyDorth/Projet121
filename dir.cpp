@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 #include "dir.hpp"
-
+#ifndef DIR_HPP_INCLUDED
+#define DIR_HPP_INCLUDED
 
 void afficheDirection(Direction d){
   string res;
@@ -65,3 +67,5 @@ void testAGAD(){
   if(d!=d1)
     cout<<"aG ne fonctionne pas"<<endl;
 }
+
+#endif

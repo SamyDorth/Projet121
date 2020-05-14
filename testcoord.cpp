@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 #include "coord.hpp"
 using namespace std;
 
