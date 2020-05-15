@@ -2,7 +2,8 @@
 #include <vector>
 using namespace std;
 #include "dir.hpp"
-
+#ifndef COORD_HPP
+#define COORD_HPP
 #define ASSERT(test) if (!(test)) cout << "Test failed in file " << __FILE__ \
                                        << " line " << __LINE__ << ": " #test << endl
 
@@ -25,3 +26,5 @@ bool egalCoord(Coord C1, Coord C2);
 void testEgalCoord();
 
 Coord devantCoord(Coord c);
+
+#endif

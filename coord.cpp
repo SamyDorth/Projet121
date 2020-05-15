@@ -57,7 +57,7 @@ Coord devantCoord(Coord c){
     case sud_est :    res.abs++; res.ord++; break;
     case est :        res.abs++; break;
     case nord_est :   res.abs++; res.ord--; break;
-    case nord:        res.abs--; break;
+    case nord:        res.ord--; break;
     }
     return res;
 }

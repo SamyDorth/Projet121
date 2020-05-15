@@ -17,7 +17,7 @@ CXXFLAGS = -Wall -std=c++11 -g
 //On donne le fichier .cpp et la liste des fichiers .o qu'ils utilisent
 
 projet: projet.cpp coord.o grille.o termite.o //Ã  complÃ©ter...
-testcoord: testcoord.cpp coord.o
+testcoord: coord.o testcoord.cpp
 testgrille: testgrille.cpp grille.o coord.o
 testdir: testdir.cpp dir.o
 //Ã  complÃ©ter...
@@ -34,6 +34,6 @@ dir.o: dir.cpp dir.hpp
 
 //Pour faire le mÃ©nage
 clean:
-	rm -f projet testgrille testcoord testdir *.o
-//Attention dans la ligne ci-dessus il faut Ã©crire
-//un seul caractÃ¨re de tabulation et pas 8 espaces.
+	rm -f	projet	testgrille	testcoord	testdir *.o
+//Attention dans la ligne ci-dessus il faut écrire
+//un seul caractère de tabulation et pas 8 espaces.
