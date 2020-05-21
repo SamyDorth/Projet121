@@ -18,8 +18,11 @@ CXXFLAGS = -Wall -std=c++11 -g
 
 projet: projet.cpp coord.o grille.o termite.o //Ã  complÃ©ter...
 testcoord: coord.o testcoord.cpp
+					g++ -Wall -std=c++11 -g -o testcoord
 testgrille: testgrille.cpp grille.o coord.o
+						g++ -Wall -std=c++11 -g -o testgrille
 testdir: testdir.cpp dir.o
+				g++ -Wall -std=c++11 -g -o testdir
 //Ã  complÃ©ter...
 
 //Les diffÃ©rents composants
