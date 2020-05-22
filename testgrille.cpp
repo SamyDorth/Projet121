@@ -5,13 +5,36 @@ using namespace std;
 #include "coord.hpp"
 #include "grille.hpp"
 
+
+
 int main(){
-  Grille G;
-  initialiseGrille(G);
-  for(int i = 0; i<MAX_GRILLE;i++){
-    for(int j = 0; j<MAX_GRILLE;j++){
-      cout<<G.grille[i][j]<<" ";
-    }
-    cout<<endl;
+  Grille G; Coord c;
+  initialiseGrilleVide(G);
+  afficheGrille(G);
+  c=creeCoord(3,5,nord);
+  poseBrindille(G,c);
+  if(not contientBrindille(G,c)){
+    cout<<"pose ou contientBrindille ne foncitonne pas"<<endl;
   }
+  enleveBrindille(G,c);
+  if(contientBrindille(G,c)){
+    cout<<"enleveBrindille ou contientBrindille ne foncitonne pas"<<endl;
+  }
+  afficheCoord(c);
+  poseTermite(G,c,5);
+  cout<<estVide(G,c)<<endl;
+  afficheCoord(c);
+
+  afficheGrille(G);
+
+  if(estVide(G,c)){
+    cout<<"poseTermite ou estVide ne foncitonne pas"<<endl;
+  }
+  enleveTermite(G,c);
+  afficheGrille(G);
+
+  if(not estVide(G,c)){
+    cout<<"enleveTermite ou estVide ne foncitonne pas"<<endl;
+  }
+
 }

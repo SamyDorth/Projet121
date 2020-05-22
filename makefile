@@ -19,8 +19,8 @@ CXXFLAGS = -Wall -std=c++11 -g
 projet: projet.cpp coord.o grille.o termite.o //Ã  complÃ©ter...
 testcoord: coord.o testcoord.cpp
 					g++ -Wall -std=c++11 -g -o testcoord
-testgrille: testgrille.cpp grille.o coord.o
-						g++ -Wall -std=c++11 -g -o testgrille
+testgrille: testgrille.cpp grille.o
+					g++ -Wall -std=c++11 -g -o testgrille
 testdir: testdir.cpp dir.o
 				g++ -Wall -std=c++11 -g -o testdir
 //Ã  complÃ©ter...
@@ -31,7 +31,7 @@ testdir: testdir.cpp dir.o
 //des fichiers .hpp dont ils dÃ©pendent
 
 coord.o: coord.cpp coord.hpp dir.o
-grille.o: grille.cpp grille.hpp coord.hpp
+grille.o: grille.cpp grille.hpp coord.o
 dir.o: dir.cpp dir.hpp
 //Ã  complÃ©ter...
 

@@ -13,7 +13,7 @@ struct Case{
 
 const int MAX_GRILLE=8;
 
-typedef struct Grille{
+struct Grille{
   Case grille[MAX_GRILLE][MAX_GRILLE];
 };
 
@@ -37,5 +37,8 @@ void enleveBrindille(Grille &G, Coord C);
 void enleveTermite(Grille &G, Coord C);
 
 void poseTermite(Grille &G, Coord C, int nT);
+
+void afficheGrille(Grille G);
+
 
 #endif
