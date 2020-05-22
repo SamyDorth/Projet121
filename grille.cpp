@@ -52,17 +52,21 @@ void poseTermite(Grille &G, Coord C, int nT){
   G.grille[C.abs][C.ord].numter=nT;
 }
 void afficheGrille(Grille G){
-  Coord Case;
+  Coord Case; int vide;
   for(int i=0;i<MAX_GRILLE;i++){
-    Case.abs=i;
+    Case.abs=i; vide=0;
     for(int j=0;j<MAX_GRILLE;j++){
       Case.ord=j;
       cout<<G.grille[i][j].brindille<<" "<<G.grille[i][j].numter<<"   ";
       if(not estVide(G,Case)){
-        cout<<"vérifier estVide";
+        vide++;
       }
     }
-    cout<<endl;
+    if(vide>0){
+      cout<<"   vérifier estVide";
+      vide=0;
+    }
+    cout<<endl<<endl;
   }
   cout<<endl<<endl;
 }
