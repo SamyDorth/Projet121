@@ -51,7 +51,7 @@ void enleveTermite(Grille &G, Coord C){
 void poseTermite(Grille &G, Coord C, int nT){
   G.grille[C.abs][C.ord].numter=nT;
 }
-void afficheGrille(Grille G){
+void afficheGrilleTest(Grille G){
   Coord Case; int vide;
   for(int i=0;i<MAX_GRILLE;i++){
     Case.abs=i; vide=0;

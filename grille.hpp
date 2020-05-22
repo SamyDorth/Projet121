@@ -78,7 +78,9 @@ void poseTermite(Grille &G, Coord C, int nT);
 *@param[in] une grille G
 *affiche la grille dans le terminal
 * */
-void afficheGrille(Grille G);
+
+void afficheGrilleTest(Grille G);
+
 
 
 #endif

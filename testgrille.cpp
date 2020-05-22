@@ -25,7 +25,7 @@ int main(){
   cout<<estVide(G,c)<<endl;
   afficheCoord(c);
 
-  afficheGrille(G);
+  afficheGrilleTest(G);
 
   if(estVide(G,c)){
     cout<<"poseTermite ou estVide ne foncitonne pas"<<endl;

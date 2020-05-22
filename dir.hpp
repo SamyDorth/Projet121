@@ -30,4 +30,7 @@ Direction aDroite(Direction d);
 * */
 void testAGAD();
 
+int dirToInt(Direction d);
+
+Direction intToDir(int I);
 #endif

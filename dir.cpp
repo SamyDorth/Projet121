@@ -66,3 +66,33 @@ void testAGAD(){
   if(d!=d1)
     cout<<"aG ne fonctionne pas"<<endl;
 }
+
+int dirToInt(Direction d){
+  int res;
+  switch(d){
+    case nord:           res = 0; break;
+    case nord_ouest :    res = 1; break;
+    case ouest :         res = 2; break;
+    case sud_ouest :     res = 3; break;
+    case sud :           res = 4; break;
+    case sud_est :       res = 5; break;
+    case est :           res = 6; break;
+    case nord_est :      res = 7; break;
+    }
+    return res;
+}
+
+Direction intToDir(int I){
+  Direction res;
+  switch(I){
+    case 0:        res = nord; break;
+    case 1 :       res = nord_ouest; break;
+    case 2 :       res = ouest; break;
+    case 3 :       res = sud_ouest; break;
+    case 4 :       res = sud; break;
+    case 5 :       res = sud_est; break;
+    case 6 :       res = est; break;
+    case 7:        res = nord_est; break;
+    }
+    return res;
+}
