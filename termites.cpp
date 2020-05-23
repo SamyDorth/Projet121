@@ -72,7 +72,9 @@ bool pasEnferme(Grille G, Termite T){
 
 void avanceTermite(Grille &G, Termite &T){
   if(estVide(G,T.C)){
+    enleveTermite(G,T.C);
     T.C=devantTermite(T);
+    poseTermite(G,T.C,T.numeroTermite);
   }
 }
 
@@ -94,11 +96,11 @@ void chargeTermite(Grille &G, Termite &T){
 
 void marcheAleatoire(Grille &G, Termite &T){
   if(pasEnferme(G,T)){
-    tourneAleat(T);
     avanceTermite(G,T);
   }
   else if(laVoieEsTLibre(G,T)){
+    tourneAleat(T);
     avanceTermite(G,T);
   }
-
+  avanceTermite(G,T);
 }

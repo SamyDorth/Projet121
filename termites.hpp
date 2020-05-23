@@ -11,6 +11,7 @@ struct Termite{
   Coord C;
   int numeroTermite;
   bool brindille;
+  int pas;
 };
 // fonction et procédures pour le termite:
 
